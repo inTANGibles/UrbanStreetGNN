@@ -1,0 +1,9 @@
+{
+  "node_features": 2,
+  "edge_features": 3,
+  "hidden_dim": 256,
+  "embedding_dim": 128,
+  "num_layers": 3,
+  "dropout": 0.2,
+  "conv_type": "gcn"
+}
