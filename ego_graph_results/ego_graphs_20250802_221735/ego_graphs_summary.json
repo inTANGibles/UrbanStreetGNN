@@ -1,0 +1,635 @@
+[
+  {
+    "graph_id": 1,
+    "nodes_count": 6,
+    "edges_count": 7,
+    "selected_footway_length": 30.190119055277467,
+    "total_length": 271.6986481161669,
+    "highway_types": {
+      "footway": 6,
+      "null": 1
+    },
+    "selected_footway_coords": [
+      [
+        674220.741964444,
+        3546325.3162996755
+      ],
+      [
+        674217.4801147952,
+        3546295.3029089067
+      ]
+    ]
+  },
+  {
+    "graph_id": 2,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 11.317641853261932,
+    "total_length": 389.26030184767944,
+    "highway_types": {
+      "footway": 1,
+      "null": 4
+    },
+    "selected_footway_coords": [
+      [
+        672271.9069359059,
+        3549326.441329732
+      ],
+      [
+        672282.2314170375,
+        3549331.077503422
+      ]
+    ]
+  },
+  {
+    "graph_id": 3,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 16.878573972276506,
+    "total_length": 234.9573473332186,
+    "highway_types": {
+      "tertiary": 1,
+      "footway": 1,
+      "null": 3
+    },
+    "selected_footway_coords": [
+      [
+        666344.8132165447,
+        3547919.8691129005
+      ],
+      [
+        666341.7203385807,
+        3547936.461893416
+      ]
+    ]
+  },
+  {
+    "graph_id": 4,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 38.75238808080175,
+    "total_length": 178.42215315995543,
+    "highway_types": {
+      "footway": 3,
+      "null": 2
+    },
+    "selected_footway_coords": [
+      [
+        668948.7780202078,
+        3548082.307070903
+      ],
+      [
+        668987.5279640203,
+        3548081.871827875
+      ]
+    ]
+  },
+  {
+    "graph_id": 5,
+    "nodes_count": 4,
+    "edges_count": 3,
+    "selected_footway_length": 8.740490203119776,
+    "total_length": 97.07075382912689,
+    "highway_types": {
+      "null": 2,
+      "footway": 1
+    },
+    "selected_footway_coords": [
+      [
+        666616.0096101081,
+        3549008.0968003147
+      ],
+      [
+        666621.7941580018,
+        3549001.544306541
+      ]
+    ]
+  },
+  {
+    "graph_id": 6,
+    "nodes_count": 7,
+    "edges_count": 7,
+    "selected_footway_length": 9.38348359369066,
+    "total_length": 763.306200387429,
+    "highway_types": {
+      "footway": 2,
+      "null": 5
+    },
+    "selected_footway_coords": [
+      [
+        664760.9393748879,
+        3547616.648512451
+      ],
+      [
+        664768.4126728887,
+        3547622.322979945
+      ]
+    ]
+  },
+  {
+    "graph_id": 7,
+    "nodes_count": 7,
+    "edges_count": 6,
+    "selected_footway_length": 40.46190440785548,
+    "total_length": 447.3845077559179,
+    "highway_types": {
+      "null": 3,
+      "footway": 3
+    },
+    "selected_footway_coords": [
+      [
+        668349.1992346441,
+        3543340.565612819
+      ],
+      [
+        668338.4988027068,
+        3543301.5442537363
+      ]
+    ]
+  },
+  {
+    "graph_id": 8,
+    "nodes_count": 6,
+    "edges_count": 6,
+    "selected_footway_length": 37.209426089070256,
+    "total_length": 313.58880482014365,
+    "highway_types": {
+      "footway": 4,
+      "null": 2
+    },
+    "selected_footway_coords": [
+      [
+        665825.29191123,
+        3545720.674460039
+      ],
+      [
+        665819.2577002394,
+        3545683.9575744467
+      ]
+    ]
+  },
+  {
+    "graph_id": 9,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 10.790401991525211,
+    "total_length": 199.28860564950344,
+    "highway_types": {
+      "footway": 5
+    },
+    "selected_footway_coords": [
+      [
+        675652.5995278914,
+        3546503.7029477833
+      ],
+      [
+        675661.2132065569,
+        3546497.203923627
+      ]
+    ]
+  },
+  {
+    "graph_id": 10,
+    "nodes_count": 7,
+    "edges_count": 7,
+    "selected_footway_length": 38.47823895680839,
+    "total_length": 385.02486807286135,
+    "highway_types": {
+      "footway": 3,
+      "null": 4
+    },
+    "selected_footway_coords": [
+      [
+        666360.9974061552,
+        3546678.5079703336
+      ],
+      [
+        666354.049236025,
+        3546640.6622598097
+      ]
+    ]
+  },
+  {
+    "graph_id": 11,
+    "nodes_count": 7,
+    "edges_count": 7,
+    "selected_footway_length": 64.14230277576323,
+    "total_length": 395.5017907327212,
+    "highway_types": {
+      "footway": 4,
+      "null": 3
+    },
+    "selected_footway_coords": [
+      [
+        665034.4719831662,
+        3545235.9240543903
+      ],
+      [
+        665005.1617926689,
+        3545178.870152347
+      ]
+    ]
+  },
+  {
+    "graph_id": 12,
+    "nodes_count": 5,
+    "edges_count": 5,
+    "selected_footway_length": 27.503121475379846,
+    "total_length": 224.61213589907686,
+    "highway_types": {
+      "null": 3,
+      "footway": 2
+    },
+    "selected_footway_coords": [
+      [
+        668465.9062769657,
+        3544362.3043440604
+      ],
+      [
+        668488.3292507681,
+        3544378.2301701535
+      ]
+    ]
+  },
+  {
+    "graph_id": 13,
+    "nodes_count": 4,
+    "edges_count": 3,
+    "selected_footway_length": 33.145493972732986,
+    "total_length": 134.1970427313335,
+    "highway_types": {
+      "footway": 2,
+      "null": 1
+    },
+    "selected_footway_coords": [
+      [
+        667022.6031704228,
+        3550506.358349289
+      ],
+      [
+        667055.6307627291,
+        3550509.151540501
+      ]
+    ]
+  },
+  {
+    "graph_id": 14,
+    "nodes_count": 7,
+    "edges_count": 6,
+    "selected_footway_length": 6.724153424271884,
+    "total_length": 136.0712134902735,
+    "highway_types": {
+      "footway": 5,
+      "null": 1
+    },
+    "selected_footway_coords": [
+      [
+        674701.291058076,
+        3548262.4671671856
+      ],
+      [
+        674702.1286609813,
+        3548269.1389481057
+      ]
+    ]
+  },
+  {
+    "graph_id": 15,
+    "nodes_count": 5,
+    "edges_count": 4,
+    "selected_footway_length": 28.694229314962712,
+    "total_length": 104.61641142508404,
+    "highway_types": {
+      "footway": 4
+    },
+    "selected_footway_coords": [
+      [
+        671284.56456208,
+        3545993.2896005856
+      ],
+      [
+        671300.1199425306,
+        3545969.1775924773
+      ]
+    ]
+  },
+  {
+    "graph_id": 16,
+    "nodes_count": 7,
+    "edges_count": 10,
+    "selected_footway_length": 156.73759150906074,
+    "total_length": 1000.8015772643469,
+    "highway_types": {
+      "footway": 4,
+      "null": 6
+    },
+    "selected_footway_coords": [
+      [
+        671141.7776354973,
+        3546434.3128891224
+      ],
+      [
+        671134.016888535,
+        3546277.7675493686
+      ]
+    ]
+  },
+  {
+    "graph_id": 17,
+    "nodes_count": 5,
+    "edges_count": 5,
+    "selected_footway_length": 19.20634696362324,
+    "total_length": 135.50115199084803,
+    "highway_types": {
+      "footway": 4,
+      "null": 1
+    },
+    "selected_footway_coords": [
+      [
+        671464.803407968,
+        3545855.783653211
+      ],
+      [
+        671483.7787095198,
+        3545852.8135194248
+      ]
+    ]
+  },
+  {
+    "graph_id": 18,
+    "nodes_count": 6,
+    "edges_count": 6,
+    "selected_footway_length": 48.69712130948327,
+    "total_length": 365.42293756836534,
+    "highway_types": {
+      "null": 4,
+      "footway": 2
+    },
+    "selected_footway_coords": [
+      [
+        665975.500656062,
+        3545607.832723523
+      ],
+      [
+        665929.858716738,
+        3545624.8098551584
+      ]
+    ]
+  },
+  {
+    "graph_id": 19,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 70.73650966174296,
+    "total_length": 155.2879782045148,
+    "highway_types": {
+      "null": 3,
+      "footway": 2
+    },
+    "selected_footway_coords": [
+      [
+        663426.5922521788,
+        3547412.906137831
+      ],
+      [
+        663497.2960133918,
+        3547415.0583342584
+      ]
+    ]
+  },
+  {
+    "graph_id": 20,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 20.04070336638745,
+    "total_length": 364.2626897723816,
+    "highway_types": {
+      "footway": 1,
+      "null": 4
+    },
+    "selected_footway_coords": [
+      [
+        668978.2706009096,
+        3544192.5227234694
+      ],
+      [
+        668997.2864758892,
+        3544186.196090069
+      ]
+    ]
+  },
+  {
+    "graph_id": 21,
+    "nodes_count": 4,
+    "edges_count": 3,
+    "selected_footway_length": 58.595363812080215,
+    "total_length": 105.74041102145642,
+    "highway_types": {
+      "null": 1,
+      "tertiary": 1,
+      "footway": 1
+    },
+    "selected_footway_coords": [
+      [
+        669923.3536366655,
+        3551156.0667125327
+      ],
+      [
+        669974.8724883464,
+        3551128.1521181106
+      ]
+    ]
+  },
+  {
+    "graph_id": 22,
+    "nodes_count": 5,
+    "edges_count": 4,
+    "selected_footway_length": 31.115309976972075,
+    "total_length": 69.44416452993364,
+    "highway_types": {
+      "null": 3,
+      "footway": 1
+    },
+    "selected_footway_coords": [
+      [
+        664410.3234630849,
+        3551604.391293
+      ],
+      [
+        664418.317275168,
+        3551634.4622338456
+      ]
+    ]
+  },
+  {
+    "graph_id": 23,
+    "nodes_count": 6,
+    "edges_count": 7,
+    "selected_footway_length": 9.5163551398667,
+    "total_length": 254.7946244470416,
+    "highway_types": {
+      "tertiary": 3,
+      "null": 3,
+      "footway": 1
+    },
+    "selected_footway_coords": [
+      [
+        667391.2300145812,
+        3548141.967133347
+      ],
+      [
+        667400.6608676701,
+        3548143.2399354386
+      ]
+    ]
+  },
+  {
+    "graph_id": 24,
+    "nodes_count": 6,
+    "edges_count": 5,
+    "selected_footway_length": 11.769679634605957,
+    "total_length": 934.9013076072139,
+    "highway_types": {
+      "null": 4,
+      "footway": 1
+    },
+    "selected_footway_coords": [
+      [
+        661090.5921892903,
+        3544651.2412655125
+      ],
+      [
+        661101.0502900601,
+        3544645.8418686027
+      ]
+    ]
+  },
+  {
+    "graph_id": 25,
+    "nodes_count": 7,
+    "edges_count": 7,
+    "selected_footway_length": 14.867099012022113,
+    "total_length": 276.89215683966756,
+    "highway_types": {
+      "secondary": 1,
+      "null": 4,
+      "footway": 2
+    },
+    "selected_footway_coords": [
+      [
+        668997.3094113194,
+        3551588.7168680034
+      ],
+      [
+        669005.6014727924,
+        3551601.0567362993
+      ]
+    ]
+  },
+  {
+    "graph_id": 26,
+    "nodes_count": 5,
+    "edges_count": 5,
+    "selected_footway_length": 26.354815528119502,
+    "total_length": 163.1811855733361,
+    "highway_types": {
+      "null": 3,
+      "footway": 2
+    },
+    "selected_footway_coords": [
+      [
+        664149.3816336757,
+        3551876.625908419
+      ],
+      [
+        664143.1846423098,
+        3551851.010022732
+      ]
+    ]
+  },
+  {
+    "graph_id": 27,
+    "nodes_count": 6,
+    "edges_count": 6,
+    "selected_footway_length": 52.56728071110263,
+    "total_length": 186.33747396689176,
+    "highway_types": {
+      "footway": 4,
+      "null": 2
+    },
+    "selected_footway_coords": [
+      [
+        669236.8723567924,
+        3551892.2941797907
+      ],
+      [
+        669282.6743986094,
+        3551866.4970488115
+      ]
+    ]
+  },
+  {
+    "graph_id": 28,
+    "nodes_count": 6,
+    "edges_count": 6,
+    "selected_footway_length": 37.08080933820658,
+    "total_length": 242.72892050101422,
+    "highway_types": {
+      "null": 2,
+      "tertiary": 2,
+      "footway": 2
+    },
+    "selected_footway_coords": [
+      [
+        667822.1097536464,
+        3542201.958799009
+      ],
+      [
+        667797.9767238533,
+        3542173.8059431296
+      ]
+    ]
+  },
+  {
+    "graph_id": 29,
+    "nodes_count": 7,
+    "edges_count": 7,
+    "selected_footway_length": 17.940527533229798,
+    "total_length": 182.42005743303372,
+    "highway_types": {
+      "footway": 5,
+      "null": 2
+    },
+    "selected_footway_coords": [
+      [
+        664306.0675411681,
+        3552105.335221722
+      ],
+      [
+        664323.9555867774,
+        3552106.7064811606
+      ]
+    ]
+  },
+  {
+    "graph_id": 30,
+    "nodes_count": 7,
+    "edges_count": 7,
+    "selected_footway_length": 75.26372853422447,
+    "total_length": 319.1392731203245,
+    "highway_types": {
+      "footway": 6,
+      "tertiary": 1
+    },
+    "selected_footway_coords": [
+      [
+        671561.9948911505,
+        3545873.1330025923
+      ],
+      [
+        671487.1031193314,
+        3545880.6063784473
+      ]
+    ]
+  }
+]

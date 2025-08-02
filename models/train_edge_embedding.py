@@ -11,6 +11,7 @@ import torch.nn.functional as F
 from torch_geometric.data import Data, DataLoader
 import networkx as nx
 import numpy as np
+import random
 from edge_embedding import EdgeEmbeddingModel, ContrastiveLearningLoss, GraphAutoEncoderLoss
 import os
 from datetime import datetime
@@ -139,7 +140,24 @@ def create_model_config():
     return config
 
 
-def train_model(graphs, config, num_epochs=500, learning_rate=1e-3, device='cpu'):
+def split_data(graphs, train_ratio=0.8, test_ratio=0.2):
+    """划分训练集和测试集"""
+    total = len(graphs)
+    train_size = int(total * train_ratio)
+    
+    # 随机打乱数据
+    random.shuffle(graphs)
+    
+    train_graphs = graphs[:train_size]
+    test_graphs = graphs[train_size:]
+    
+    print(f"数据集划分:")
+    print(f"  训练集: {len(train_graphs)} 个图")
+    print(f"  测试集: {len(test_graphs)} 个图")
+    
+    return train_graphs, test_graphs
+
+def train_model(train_graphs, test_graphs, config, num_epochs=500, learning_rate=1e-3, device='cpu'):
     """训练模型"""
     print("创建模型...")
     model = EdgeEmbeddingModel(**config)
@@ -157,7 +175,8 @@ def train_model(graphs, config, num_epochs=500, learning_rate=1e-3, device='cpu'
     )
     
     # 数据加载器
-    dataloader = DataLoader(graphs, batch_size=1, shuffle=True)
+    train_dataloader = DataLoader(train_graphs, batch_size=1, shuffle=True)
+    test_dataloader = DataLoader(test_graphs, batch_size=1, shuffle=False)
     
     print("开始训练...")
     model.train()
@@ -166,10 +185,12 @@ def train_model(graphs, config, num_epochs=500, learning_rate=1e-3, device='cpu'
     training_history = []
     
     for epoch in range(num_epochs):
-        total_loss = 0.0
-        num_batches = 0
+        # 训练阶段
+        model.train()
+        total_train_loss = 0.0
+        num_train_batches = 0
         
-        for batch in dataloader:
+        for batch in train_dataloader:
             batch = batch.to(device)
             
             # 前向传播
@@ -187,33 +208,52 @@ def train_model(graphs, config, num_epochs=500, learning_rate=1e-3, device='cpu'
             
             optimizer.step()
             
-            total_loss += loss.item()
-            num_batches += 1
+            total_train_loss += loss.item()
+            num_train_batches += 1
+        
+        # 测试阶段
+        model.eval()
+        total_test_loss = 0.0
+        num_test_batches = 0
+        
+        with torch.no_grad():
+            for batch in test_dataloader:
+                batch = batch.to(device)
+                
+                # 前向传播
+                center_edge_embedding, structural_score = model(batch)
+                
+                # 计算损失
+                loss = gae_loss(center_edge_embedding, batch.edge_index, structural_score)
+                
+                total_test_loss += loss.item()
+                num_test_batches += 1
         
         # 计算平均损失
-        avg_loss = total_loss / num_batches
-        training_history.append(avg_loss)
+        avg_train_loss = total_train_loss / num_train_batches
+        avg_test_loss = total_test_loss / num_test_batches
+        training_history.append(avg_train_loss)
         
-        # 学习率调度
-        scheduler.step(avg_loss)
+        # 学习率调度（基于测试损失）
+        scheduler.step(avg_test_loss)
         
-        # 保存最佳模型
-        if avg_loss < best_loss:
-            best_loss = avg_loss
+        # 保存最佳模型（基于测试损失）
+        if avg_test_loss < best_loss:
+            best_loss = avg_test_loss
             torch.save(model.state_dict(), 'best_edge_embedding_model.pt')
         
         # 打印训练进度
         if (epoch + 1) % 10 == 0:
             current_lr = optimizer.param_groups[0]['lr']
-            print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {avg_loss:.4f}, LR: {current_lr:.6f}")
+            print(f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {avg_train_loss:.4f}, Test Loss: {avg_test_loss:.4f}, LR: {current_lr:.6f}")
     
     print("训练完成！")
-    print(f"最佳损失: {best_loss:.4f}")
+    print(f"最佳测试损失: {best_loss:.4f}")
     
     # 保存训练历史
     np.save('training_history.npy', np.array(training_history))
     
-    return model, training_history
+    return model, training_history, test_graphs
 
 
 def evaluate_model_performance(model, graphs, device='cpu'):
@@ -307,24 +347,29 @@ def main():
     for key, value in config.items():
         print(f"  {key}: {value}")
     
-    # 3. 训练模型
-    print("\n🎯 步骤3: 训练模型")
-    model, training_history = train_model(
-        graphs=graphs,
+    # 3. 数据划分
+    print("\n📊 步骤3: 数据划分")
+    train_graphs, test_graphs = split_data(graphs, train_ratio=0.8, test_ratio=0.2)
+    
+    # 4. 训练模型
+    print("\n🎯 步骤4: 训练模型")
+    model, training_history, test_graphs = train_model(
+        train_graphs=train_graphs,
+        test_graphs=test_graphs,
         config=config,
         num_epochs=500,
         learning_rate=1e-3,
         device=device
     )
     
-    # 4. 评估模型
-    print("\n📈 步骤4: 评估模型")
+    # 5. 评估模型
+    print("\n📈 步骤5: 评估模型")
     center_edge_embeddings, structural_scores, stats = evaluate_model_performance(
-        model, graphs, device
+        model, test_graphs, device
     )
     
-    # 5. 保存结果
-    print("\n💾 步骤5: 保存结果")
+    # 6. 保存结果
+    print("\n💾 步骤6: 保存结果")
     save_results(model, center_edge_embeddings, structural_scores, stats, config)
     
     print(f"\n🎉 训练完成！结束时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
